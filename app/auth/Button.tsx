@@ -15,8 +15,8 @@ export const Button = (props: Props) => {
   if (session) {
     return (
       <div className='flex items-stretch'>
-        <Link href="/blog/new" className='mr-6 hover:underline self-center'>✍️ Write a Post</Link>
-        <button className="text-white bg-black p-4 cursor-pointer" onClick={(e) => {
+        <Link href="/blog/new" className='mr-6 hover:underline self-center text-[#0f277b] font-bold'>✍️ Write a Post</Link>
+        <button className="text-[#0f277b] border-2 border-[#0f277b] px-5 my-5 rounded-full cursor-pointer" onClick={(e) => {
           e.preventDefault()
           signOut()
         }}>Sign Out</button>
@@ -24,6 +24,6 @@ export const Button = (props: Props) => {
     )
   }
   return (
-    <div onClick={() => signIn()} className="text-white bg-black p-4 cursor-pointer">Sign In</div>
+    <div onClick={() => signIn()} className="text-[#0f277b] border-2 border-[#0f277b] px-5 my-5 rounded-full cursor-pointer">Sign In</div>
   )
 }

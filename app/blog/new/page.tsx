@@ -10,6 +10,7 @@ const page = async (props: Props) => {
   return (
     <div>
       <NewBlogForm blogCategories={categories} />
+      <br />
     </div>
   )
 }

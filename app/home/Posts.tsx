@@ -15,17 +15,13 @@ const Posts = async (props: Props) => {
   },
   )
 
-  const bgClasses = [
-    'bg-pink-500',
-    'bg-blue-500',
-    'bg-yellow-500',
-  ]
 
   return (
-    <div><h2 className='text-4xl text-center mt-6'>Trending</h2>
+    <div className='w-11/12 mx-auto'>
+      <h2 className='text-[#8f8952] font-bold text-6xl text-center mt-6'>Trending</h2>
       <div className='grid grid-cols-1 sm:grid-cols-3 gap-4 mt-4'>
         {posts.map((post, index) => (
-          <PostCard key={post.id} post={post} className={bgClasses[index]} />
+          <PostCard key={post.id} post={post}/>
         ))}
       </div>
     </div>

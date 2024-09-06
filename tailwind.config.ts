@@ -18,9 +18,8 @@ const config: Config = {
         "2xl": "1300px",
       },
     },
-    borderColor: {
-      DEFAULT: "black",
-    },
+   
+    
   },
   plugins: [],
 };

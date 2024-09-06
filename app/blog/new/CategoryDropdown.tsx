@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { IoIosArrowDropdownCircle } from "react-icons/io";
 
 type SelectOption = {
   id: number;
@@ -26,12 +27,12 @@ const CategoryDropdown = (props: Props) => {
   const currSelection = props.list.find(item => item.id === props.selected) || { name: 'Select a category' };
 
   return (
-    <div className='my-6'><button type='button' onClick={toggleOpen} className='px-3 py-3 bg-yellow-500 rounded-md border'>{currSelection.name}</button>
+    <div className='my-6'><button type='button' onClick={toggleOpen} className='flex justify-between items-center gap-2 px-3 py-3 border border-[#0f277b] text-[#0f277b] rounded-md'>{currSelection.name} <IoIosArrowDropdownCircle className='w-5 h-5' /></button>
       {
         open ? (
-          <div className='absolute mt-2 bg-white rounded-md border neo-shadow'>
+          <div className='absolute mt-2 bg-white text-[#0f277b] rounded-md border border-[#0f277b]'>
             {props.list.map((item) => (
-              <div className="px-3 py-2 hover:bg-gray-100 cursor-pointer" key={item.id} onClick={() => selectOption(item.id)}>{item.name}</div>
+              <div className="px-3 py-2 hover:bg-[#0f277b] hover:text-white cursor-pointer" key={item.id} onClick={() => selectOption(item.id)}>{item.name}</div>
             ))}
           </div>
         ) : null

@@ -21,7 +21,7 @@ const page = async (props: Props) => {
 
   return (
     <div className='my-24 container'>
-      <h2 className='text-4xl text-center my-6'>All Articles</h2>
+      <h2 className='text-6xl font-bold text-[#8f8952] text-center my-6'>All Articles</h2>
       <AllPosts categories={categories} posts={posts} /></div>
   )
 }
