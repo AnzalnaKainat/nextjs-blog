@@ -23,8 +23,11 @@ const CategoryDropdown = (props: Props) => {
     props.setSelected(id);
     setOpen(false);
   }
-
+ 
+  
   const currSelection = props.list.find(item => item.id === props.selected) || { name: 'Select a category' };
+ 
+
 
   return (
     <div className='my-6'><button type='button' onClick={toggleOpen} className='flex justify-between items-center gap-2 px-3 py-3 border border-[#0f277b] text-[#0f277b] rounded-md'>{currSelection.name} <IoIosArrowDropdownCircle className='w-5 h-5' /></button>
@@ -43,3 +46,6 @@ const CategoryDropdown = (props: Props) => {
 }
 
 export default CategoryDropdown
+
+
+

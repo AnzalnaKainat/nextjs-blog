@@ -115,7 +115,11 @@ const NewBlogForm = (props: Props) => {
             }}
           />
           
-          <CategoryDropdown list={props.blogCategories} selected={categoryId} setSelected={(selected: number) => setCategoryId(selected)} />
+          <CategoryDropdown 
+          list={props.blogCategories} 
+          selected={categoryId} 
+          setSelected={(selected: number) => setCategoryId(selected)} />
+
         </div>
 
         <button type="submit" className='w-fit-content text-white bg-[#0f277b] px-4 py-2 sm:px-6 sm:py-4 mt-6 border-2 rounded-lg'>
