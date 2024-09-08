@@ -10,7 +10,8 @@ const Header = (props: Props) => {
   return (
     <SessionProvider>
       <div className='flex justify-between mx-5'>
-        <Link href="/" className="text-4xl text-[#8f8952] mx-2 my-4 italic">ByteBlog</Link>
+        <Link href="/" className="text-3xl text-[#8f8952] mx-2 my-4 font-bold">ByteBlog</Link>
+    
         <AuthButton />
       </div>
     </SessionProvider>

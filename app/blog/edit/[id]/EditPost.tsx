@@ -13,7 +13,7 @@ import 'react-quill/dist/quill.snow.css';
 
 type Props = {
   blogCategories: Category[];
-  post: any; // Make sure to type this correctly according to your post structure
+  post: any; 
 };
 
 const ReactQuill = dynamic(() => import("react-quill"), { ssr: false });
@@ -103,7 +103,7 @@ const EditPost = (props: Props) => {
       >
         <input
           type="text"
-          className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 focus-visible:outline-none p-2 border-b-2"
+          className="text-3xl sm:text-5xl lg:text-6xl font-bold mb-6 focus-visible:outline-none p-2 border-b-2"
           placeholder="Title"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
@@ -118,7 +118,7 @@ const EditPost = (props: Props) => {
           />
         </div>
 
-        <div className="self-start mt-4">
+        <div className="self-start sm:mt-4 mt-10">
           {thumbnail && (
             <img
               src={thumbnail}

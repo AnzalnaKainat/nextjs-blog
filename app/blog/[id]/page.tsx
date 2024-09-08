@@ -22,7 +22,7 @@ const page = async ({
 
   // Pass the data to the Client Component
   return (
-    <div className="w-4/5 mx-auto mt-6 mb-10">
+    <div className="w-10/12 mx-auto mt-6 mb-10">
       <PostClient post={post} />
     </div>
   );

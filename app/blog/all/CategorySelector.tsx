@@ -15,12 +15,12 @@ export const CategorySelector = (props: CategorySelectorPropsWithState) => {
 
   return (
     <div className='flex  flex-col justify-center my-4'>
-      <div className='flex justify-center flex-wrap'>
+      <div className='flex justify-center flex-wrap mt-16'>
         {
           props.categories.map((category, index) => (
             <button key={category.id}
               onClick={() => props.selectCategory(category.id)}
-              className='inline-block rounded-full text-xl px-4 py-2 text-white mr-4 my-10 bg-[#0f277b]'>{category.name}</button>
+              className='inline-block rounded-full sm:text-xl text-lg px-4 py-2 text-white mr-4 mb-5 bg-[#0f277b]'>{category.name}</button>
           ))
         }
       </div>

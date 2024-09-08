@@ -18,8 +18,8 @@ const Posts = async (props: Props) => {
 
   return (
     <div className='w-11/12 mx-auto'>
-      <h2 className='text-[#8f8952] font-bold text-6xl text-center mt-6'>Trending</h2>
-      <div className='grid grid-cols-1 sm:grid-cols-3 gap-4 mt-4'>
+      <h2 className='text-[#8f8952] font-bold sm:text-6xl text-4xl text-center mt-6'>Trending</h2>
+      <div className='grid grid-cols-1 md:grid-cols-3 sm:grid-cols-2 gap-4 mt-4'>
         {posts.map((post, index) => (
           <PostCard key={post.id} post={post}/>
         ))}
