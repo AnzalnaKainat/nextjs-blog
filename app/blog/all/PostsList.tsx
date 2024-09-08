@@ -2,7 +2,6 @@ import React from 'react';
 import { Prisma } from '@prisma/client';
 import Link from 'next/link';
 import parse from 'html-react-parser';
-import DOMPurify from 'dompurify'
 
 type Post = Prisma.PostGetPayload<{
   include: { categories: true };
@@ -38,8 +37,8 @@ export const PostsList = (props: PostListProps) => {
               }
             </figure>
             <p className='text-base mb-4 line-clamp-4'>
-              {/* {parse(post.content)} */}
-              {parse(DOMPurify.sanitize(post.content || ''))}
+              {parse(post.content || '')}
+              {/* {parse(DOMPurify.sanitize(post.content || ''))} */}
             </p>
             <p className='text-[#0f277b] cursor-pointer'>Read More</p>
           </Link>
