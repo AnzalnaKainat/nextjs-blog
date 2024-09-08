@@ -1,6 +1,5 @@
-// app/blog/[id]/page.tsx (Server Component)
 import { prisma } from "@/lib/prisma";
-import PostClient from "./PostClient"; // Import the client component
+import PostClient from "./PostClient"; 
 
 
 const page = async ({
