@@ -56,7 +56,7 @@ const PostClient = ({ post }: { post: any }) => {
         <h1 className="text-3xl sm:text-5xl my-5 sm:my-10 font-bold text-[#8f8952]">
           {post.title}
         </h1>
-        <div className="flex flex-col sm:flex-row justify-between gap-5 sm:gap-0">
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-5 sm:gap-0">
           <div className="flex items-center">
             <div
               className="w-16 h-16 sm:w-20 sm:h-20 ml-0 sm:ml-3 mr-2 rounded-full bg-contain"
