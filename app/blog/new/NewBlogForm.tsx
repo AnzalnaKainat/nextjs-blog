@@ -29,7 +29,7 @@ const NewBlogForm = (props: Props) => {
   const [submitted, setSubmitted] = useState<boolean>(false);
 
   if (!session && status !== "loading") return (
-    <div>You must be signed in to post</div>
+    <div>Loading...</div>
   );
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {

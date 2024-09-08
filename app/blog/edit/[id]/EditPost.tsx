@@ -66,8 +66,6 @@ const EditPost = (props: Props) => {
       if (!response.ok) {
         throw new Error("Failed to update post");
       }
-
-      alert("Post updated successfully");
       setSubmitted(true);
       router.push(`/blog/${id}`);
     } catch (error) {

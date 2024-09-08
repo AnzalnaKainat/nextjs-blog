@@ -2,19 +2,19 @@
 import React from 'react'
 import Link from 'next/link'
 import { Button as AuthButton } from "../auth/Button";
-import { SessionProvider } from 'next-auth/react';
+// import { SessionProvider } from 'next-auth/react';
 
 type Props = {}
 
 const Header = (props: Props) => {
   return (
-    <SessionProvider>
+    // <SessionProvider>
       <div className='flex justify-between mx-5'>
         <Link href="/" className="text-3xl text-[#8f8952] mx-2 my-4 font-bold">ByteBlog</Link>
     
         <AuthButton />
       </div>
-    </SessionProvider>
+    // </SessionProvider>
   )
 }
 
