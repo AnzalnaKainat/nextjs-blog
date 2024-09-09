@@ -1,6 +1,7 @@
 import React from 'react';
 import { Prisma } from '@prisma/client';
 import Link from 'next/link';
+import Image from 'next/image';
 import parse from 'html-react-parser';
 
 type Post = Prisma.PostGetPayload<{
@@ -17,21 +18,25 @@ export const PostsList = (props: PostListProps) => {
       {props.posts.map((post: Post) => (
         <div key={post.id} className='flex flex-col border border-[#8f8952] rounded-md bg-white p-4 shadow-md transition-transform transform hover:scale-105'>
           <Link href={`/blog/${post.id}`} className='flex flex-col h-full'>
-            <h1 className='text-2xl font-bold text-[#8f8952] mb-2'>{post.title}</h1>
+            <h1 className='text-2xl font-bold text-[#8f8952] mb-2 '>{post.title}</h1>
             <p className='text-sm text-zinc-700 mb-4'>{post.createdAt?.toLocaleString()}</p>
             <figure className='w-full mb-4'>
               {
                 post.imgURL ? 
-                <img 
+                <Image
                   src={post.imgURL} 
                   alt="thumbnail" 
-                  className='w-full h-48 object-cover rounded-md' 
+                  width={500}         
+                  height={192}
+                  className='object-cover rounded-md' 
                   loading="lazy"
                 /> : 
-                <img 
+                <Image
                   src="/article-placeholder.png" 
                   alt="thumbnail" 
-                  className='w-full h-48 object-cover rounded-md' 
+                  width={500}         
+                  height={192}
+                  className='object-cover rounded-md' 
                   loading="lazy"
                 />
               }

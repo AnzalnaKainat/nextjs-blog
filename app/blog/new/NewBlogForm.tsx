@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import { useSession } from 'next-auth/react'
 import { createPost } from "@/app/actions/publishPost";
 import Link from 'next/link';
+import Image from 'next/image';
 import type { Category } from '@prisma/client';
 import CategoryDropdown from './CategoryDropdown';
 import { Prisma } from '@prisma/client';
@@ -100,7 +101,13 @@ const NewBlogForm = (props: Props) => {
         </div>
 
         <div className="self-start sm:mt-4 mt-10">
-          {thumbnail && <img src={thumbnail} alt="Thumbnail" className='w-24 h-24 object-cover rounded-full mb-3' />}
+          {thumbnail && (
+          <Image src={thumbnail}
+           alt="Thumbnail" 
+           width={96}   
+           height={96}
+           className='w-24 h-24 object-cover rounded-full mb-3' />
+           )}
           <label className='block text-slate-600 mt-6 mb-2'>{thumbnail ? "Change Image" : "Add thumbnail image (optional)"}</label>
           <UploadButton
             className='items-start'

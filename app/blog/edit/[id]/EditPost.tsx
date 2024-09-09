@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { useRouter, useParams } from "next/navigation";
 import dynamic from "next/dynamic";
 import Link from "next/link";
+import Image from "next/image";
 import { Prisma } from "@prisma/client";
 import type { Category } from '@prisma/client';
 import "@uploadthing/react/styles.css";
@@ -118,11 +119,14 @@ const EditPost = (props: Props) => {
 
         <div className="self-start sm:mt-4 mt-10">
           {thumbnail && (
-            <img
+            <Image
               src={thumbnail}
               alt="Thumbnail"
+              width={96}   
+              height={96}
               className="w-24 h-24 object-cover rounded-full mb-3"
             />
+           
           )}
           <label className="block text-slate-600 mt-6 mb-2">
             {thumbnail ? "Change Image" : "Add thumbnail image (optional)"}
