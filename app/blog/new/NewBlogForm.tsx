@@ -100,7 +100,7 @@ const NewBlogForm = (props: Props) => {
           />
         </div>
 
-        <div className="self-start sm:mt-4 mt-10">
+        <div className="self-start sm:mt-4 mt-10 ">
           {thumbnail && (
           <Image src={thumbnail}
            alt="Thumbnail" 
@@ -125,7 +125,7 @@ const NewBlogForm = (props: Props) => {
           <CategoryDropdown 
           list={props.blogCategories} 
           selected={categoryId} 
-          setSelected={(selected: number) => setCategoryId(selected)} />
+          setSelected={setCategoryId} />
 
         </div>
 
